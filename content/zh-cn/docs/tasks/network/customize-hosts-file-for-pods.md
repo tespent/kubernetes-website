@@ -178,7 +178,7 @@ container runtime you use.
 ## 为什么 kubelet 管理 hosts 文件？{#why-does-kubelet-manage-the-hosts-file}
 
 kubelet 管理每个Pod 容器的 `hosts` 文件，以防止容器运行时在容器已经启动后修改文件。
-由于历史原因，Kubernetes 总是使用 Docker Engine 作为其容器运行时，而 Docker Engine 
+历史上，Kubernetes 总是使用 Docker Engine 作为其容器运行时，而 Docker Engine 
 将在容器启动后修改 `/etc/hosts` 文件。
 
 当前的 Kubernetes 可以使用多种容器运行时；即便如此，kubelet 管理在每个容器中创建 hosts文件，
